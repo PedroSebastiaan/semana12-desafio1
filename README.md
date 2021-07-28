@@ -22,3 +22,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+* Desafio correspondiente a la fecha 27 de julio.
