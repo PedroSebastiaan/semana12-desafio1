@@ -16,13 +16,13 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.create(book_params)
-    respond_to do |format|
-      if @book.save
-        format.html{ redirect_to @book, notice: 'Successfully created.' }
-      else
-        format.html { render :new }
+      respond_to do |format|
+        if @book.save
+          format.html{ redirect_to @book, notice: 'Successfully created.' }
+        else
+          format.html { render :new }
+        end
       end
-    end
   end
 
   def edit
