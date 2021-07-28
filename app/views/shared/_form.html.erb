@@ -27,12 +27,16 @@
 
     <div class="form-group">
         <%= f.label :lending_date, "Lending Date" %>
-        <%= f.datetime_select :lending_date, class: 'form-control' %>
+        <div>
+            <%= f.datetime_select :lending_date, class: 'form-control' %>
+        </div>
     </div>
 
     <div class="form-group">
         <%= f.label :return_date, "Return Date" %>
-        <%= f.datetime_select :return_date, class: 'form-control' %>
+        <div>
+            <%= f.datetime_select :return_date, class: 'form-control' %>
+        </div>
     </div>
     
     <div class = 'actions'>
