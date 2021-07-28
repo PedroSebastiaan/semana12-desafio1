@@ -1,0 +1,41 @@
+<%= form_with(model: book, local: true) do |f| %>
+    <% if book.errors.any? %>
+        <div id = 'error_explanation'>
+            <h2>We have a trouble with:</h2>
+            <ul>
+                <% book.errors.full_messages.each do |msg|%>
+                    <li><%= msg %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+
+    <div class="form-group">
+        <%= f.label :title, "Title" %>
+        <%= f.text_field :title, placeholder: "The title", class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+        <%= f.label :author, "Author" %>
+        <%= f.text_field :author, placeholder: "Author's name", class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+        <%= f.label :status, "Where is??" %>
+        <%= f.select :status, options_for_select(@statuses),{:include_blank => true}, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+        <%= f.label :lending_date, "Lending Date" %>
+        <%= f.datetime_select :lending_date, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+        <%= f.label :return_date, "Return Date" %>
+        <%= f.datetime_select :return_date, class: 'form-control' %>
+    </div>
+
+    <div class = 'actions'>
+        <%= f.submit %>
+    </div>
+<% end %>
