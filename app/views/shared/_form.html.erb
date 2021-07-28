@@ -28,14 +28,14 @@
     <div class="form-group">
         <%= f.label :lending_date, "Lending Date" %>
         <div>
-            <%= f.datetime_select :lending_date, class: 'form-control' %>
+            <%= f.datetime_select :lending_date, class: 'form-control', include_blank: true %>
         </div>
     </div>
 
     <div class="form-group">
         <%= f.label :return_date, "Return Date" %>
         <div>
-            <%= f.datetime_select :return_date, class: 'form-control' %>
+            <%= f.datetime_select :return_date, class: 'form-control', include_blank: true %>
         </div>
     </div>
     
